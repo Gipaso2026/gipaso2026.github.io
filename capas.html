@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulación de Capas | El Arte del Diorama</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="inicio.html" class="brand">
+        <div class="brand-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+            <polyline points="2 17 12 22 22 17"></polyline>
+            <polyline points="2 12 12 17 22 12"></polyline>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">DIORAMAS</span>
+          <span class="brand-subtitle">Simulador de Estratos</span>
+        </div>
+      </a>
+
+      <nav class="nav-tabs" aria-label="Navegación principal">
+        <a href="inicio.html" class="nav-tab-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+          <span>Inicio</span>
+        </a>
+
+        <a href="capas.html" class="nav-tab-btn active">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+            <polyline points="2 17 12 22 22 17"></polyline>
+            <polyline points="2 12 12 17 22 12"></polyline>
+          </svg>
+          <span>Simulación de Capas</span>
+        </a>
+
+        <a href="proceso.html" class="nav-tab-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+          </svg>
+          <span>Proceso de Creación</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div class="section-header simulator-header">
+      <span class="section-tag">Simulador Interactivo de Estratos</span>
+      <h2 class="section-title">Anatomía por Capas de un Diorama</h2>
+      <p class="section-desc">
+        Todo gran diorama se construye de abajo hacia arriba en estratos secuenciales. Utiliza los controles para aislar cada capa, explorar la <strong>vista explosionada</strong> o inspeccionar la ficha técnica de cada material.
+      </p>
+    </div>
+
+    <div class="simulator-workspace">
+      
+      <!-- Columna Izquierda: Escenario Visual SVG -->
+      <div class="simulator-stage-col">
+        <div class="simulator-stage-box">
+          
+          <div class="stage-controls-overlay">
+            <div class="view-mode-pill">
+              <button id="btnViewNormal" class="mode-btn active" title="Visualización ensamblada">Vista Ensamblada</button>
+              <button id="btnViewExploded" class="mode-btn" title="Separar estratos verticalmente">Vista Explosionada</button>
+            </div>
+
+            <div id="activeLayersCounter" class="layer-counter-pill">
+              8 de 8 Capas Activas
+            </div>
+          </div>
+
+          <!-- Gráfico SVG Interactivo con las 8 capas apiladas -->
+          <div class="diorama-interactive-svg-wrap">
+            <svg id="dioramaInteractiveSvg" viewBox="0 0 520 380" width="100%" height="100%">
+              <defs>
+                <filter id="layerShadow" x="-20%" y="-20%" width="140%" height="140%">
+                  <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#000" flood-opacity="0.6"/>
+                </filter>
+                <linearGradient id="gradFoam" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#5588A3"/>
+                  <stop offset="100%" stop-color="#2C4D5E"/>
+                </linearGradient>
+                <linearGradient id="gradEarth" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#805B3A"/>
+                  <stop offset="50%" stop-color="#5B3E25"/>
+                  <stop offset="100%" stop-color="#3B2513"/>
+                </linearGradient>
+                <linearGradient id="gradGrass" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#6F9940"/>
+                  <stop offset="50%" stop-color="#4E7326"/>
+                  <stop offset="100%" stop-color="#2F4C15"/>
+                </linearGradient>
+                <linearGradient id="gradRoof" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#C2593F"/>
+                  <stop offset="100%" stop-color="#7A2D1A"/>
+                </linearGradient>
+                <linearGradient id="gradWater" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#78B3B8" stop-opacity="0.8"/>
+                  <stop offset="100%" stop-color="#BEE5EB" stop-opacity="0.95"/>
+                </linearGradient>
+              </defs>
+
+              <!-- CAPA 0: BASE Y MARCO DE MADERA -->
+              <g id="diorama-svg-layer-0" class="stacked-layer-item">
+                <polygon points="50,290 260,350 470,290 260,230" fill="#24140A" filter="url(#layerShadow)"/>
+                <polygon points="50,290 260,350 260,370 50,310" fill="#3D2313"/>
+                <polygon points="260,350 470,290 470,310 260,370" fill="#1A0D06"/>
+                <rect x="220" y="348" width="80" height="14" rx="2" fill="#C8963E" stroke="#5A3E12" stroke-width="1"/>
+                <text x="260" y="358" font-family="'Cinzel', serif" font-size="7" font-weight="700" fill="#2A1B05" text-anchor="middle">1:35 DIORAMA</text>
+              </g>
+
+              <!-- CAPA 1: RELIEVE TOPOGRÁFICO DE XPS -->
+              <g id="diorama-svg-layer-1" class="stacked-layer-item">
+                <polygon points="65,275 260,332 455,275 260,220" fill="url(#gradFoam)"/>
+                <polygon points="65,275 260,332 260,348 65,291" fill="#325A6E"/>
+                <polygon points="260,332 455,275 455,291 260,348" fill="#1F3A47"/>
+                <path d="M120,235 Q180,195 240,215 T360,225 L410,250 L260,290 Z" fill="#416F85" opacity="0.9"/>
+              </g>
+
+              <!-- CAPA 2: TEXTURA Y TIERRA REAL -->
+              <g id="diorama-svg-layer-2" class="stacked-layer-item">
+                <path d="M68,272 Q150,295 260,329 Q360,298 452,272 Q360,225 260,218 Q160,224 68,272 Z" fill="url(#gradEarth)"/>
+                <polygon points="90,255 115,245 130,260 110,270 85,263" fill="#6C6965" stroke="#3A3835" stroke-width="1"/>
+                <polygon points="120,250 145,242 155,255 135,262" fill="#585652"/>
+                <circle cx="210" cy="285" r="3" fill="#757069"/>
+                <circle cx="225" cy="292" r="2" fill="#8C867E"/>
+                <circle cx="340" cy="275" r="2.5" fill="#757069"/>
+              </g>
+
+              <!-- CAPA 3: IMPRIMACIÓN Y PINTURA BASE -->
+              <g id="diorama-svg-layer-3" class="stacked-layer-item">
+                <ellipse cx="115" cy="255" rx="30" ry="12" fill="#20150D" opacity="0.45"/>
+                <path d="M160,265 C200,280 250,290 310,310 C340,318 360,305 380,295" stroke="#9E7649" stroke-width="22" stroke-linecap="round" fill="none" opacity="0.75"/>
+                <path d="M165,265 C205,280 255,290 315,310" stroke="#B88F5E" stroke-width="14" stroke-linecap="round" fill="none" opacity="0.5"/>
+              </g>
+
+              <!-- CAPA 4: ARQUITECTURA RURAL CAMPESINA -->
+              <g id="diorama-svg-layer-4" class="stacked-layer-item">
+                <polygon points="190,195 260,230 260,175 190,140" fill="#E2DAC9" stroke="#5C4533" stroke-width="1.5"/>
+                <line x1="225" y1="212" x2="225" y2="157" stroke="#684A31" stroke-width="3"/>
+                <line x1="190" y1="175" x2="260" y2="210" stroke="#684A31" stroke-width="2"/>
+                <polygon points="215,207 235,217 235,185 215,175" fill="#5A3A1F" stroke="#37210E" stroke-width="1"/>
+                <polygon points="260,230 315,198 315,145 260,175" fill="#C5BCAB" stroke="#5C4533" stroke-width="1.5"/>
+                <polygon points="280,188 298,178 298,165 280,174" fill="#382A20"/>
+                <polygon points="180,140 255,176 315,140 240,105" fill="url(#gradRoof)" stroke="#531F13" stroke-width="1.5"/>
+                <polygon points="255,176 325,136 320,132 255,172" fill="#882C17"/>
+                <polygon points="230,118 245,110 245,95 230,102" fill="#756E65" stroke="#3D3832" stroke-width="1"/>
+                <ellipse cx="150" cy="265" rx="14" ry="8" fill="#524C44" stroke="#2B2723" stroke-width="1.5"/>
+                <polygon points="138,265 138,252 142,252 142,265" fill="#704F34"/>
+                <polygon points="158,265 158,252 162,252 162,265" fill="#704F34"/>
+                <polygon points="135,252 150,242 165,252" fill="#8A462B"/>
+                <g stroke="#614429" stroke-width="2.5" stroke-linecap="round">
+                  <line x1="285" y1="265" x2="285" y2="245"/>
+                  <line x1="305" y1="260" x2="305" y2="240"/>
+                  <line x1="325" y1="255" x2="325" y2="235"/>
+                  <line x1="280" y1="255" x2="330" y2="245" stroke-width="1.5"/>
+                </g>
+              </g>
+
+              <!-- CAPA 5: VEGETACIÓN BASE -->
+              <g id="diorama-svg-layer-5" class="stacked-layer-item">
+                <path d="M75,265 Q130,230 180,240 Q170,270 120,278 Z" fill="url(#gradGrass)" opacity="0.9"/>
+                <path d="M330,260 Q390,250 435,268 Q380,290 325,280 Z" fill="url(#gradGrass)" opacity="0.85"/>
+                <g fill="#7AA874" stroke="#486D33" stroke-width="0.8">
+                  <path d="M130,270 L128,260 L132,270 L135,258 L136,270 Z"/>
+                  <path d="M340,285 L338,276 L342,285 L345,274 L347,285 Z"/>
+                  <path d="M220,305 L218,296 L221,305 L224,295 L225,305 Z" fill="#BFAF6B" stroke="#7A6F3A"/>
+                </g>
+              </g>
+
+              <!-- CAPA 6: ÁRBOL Y HUERTO -->
+              <g id="diorama-svg-layer-6" class="stacked-layer-item">
+                <path d="M380,245 Q375,200 370,165 Q360,135 345,115" stroke="#462C18" stroke-width="8" stroke-linecap="round" fill="none"/>
+                <path d="M370,165 Q395,140 410,125" stroke="#462C18" stroke-width="5" stroke-linecap="round" fill="none"/>
+                <path d="M370,175 Q380,150 375,130" stroke="#462C18" stroke-width="4" stroke-linecap="round" fill="none"/>
+                <ellipse cx="355" cy="115" rx="36" ry="26" fill="#3D6328" opacity="0.95"/>
+                <ellipse cx="380" cy="105" rx="42" ry="30" fill="#588534" opacity="0.95"/>
+                <ellipse cx="405" cy="120" rx="34" ry="24" fill="#477329" opacity="0.95"/>
+                <ellipse cx="375" cy="95" rx="32" ry="22" fill="#75A843" opacity="0.9"/>
+                <circle cx="360" cy="110" r="2.2" fill="#C93226"/>
+                <circle cx="385" cy="105" r="2.2" fill="#C93226"/>
+                <circle cx="400" cy="125" r="2.2" fill="#C93226"/>
+                <circle cx="370" cy="95" r="2.2" fill="#C93226"/>
+                <g>
+                  <rect x="295" y="270" width="35" height="15" rx="3" fill="#422915" stroke="#27180D" stroke-width="1"/>
+                  <circle cx="303" cy="275" r="3" fill="#88BA59"/>
+                  <circle cx="312" cy="275" r="3.2" fill="#7CAB4D"/>
+                  <circle cx="321" cy="275" r="2.8" fill="#88BA59"/>
+                  <circle cx="307" cy="281" r="3.5" fill="#E67E22" stroke="#A8530B" stroke-width="0.8"/>
+                  <circle cx="318" cy="281" r="3.8" fill="#E67E22" stroke="#A8530B" stroke-width="0.8"/>
+                </g>
+              </g>
+
+              <!-- CAPA 7: CHARCO, CARRETILLA Y CAMPESINO -->
+              <g id="diorama-svg-layer-7" class="stacked-layer-item">
+                <ellipse cx="270" cy="302" rx="20" ry="7" fill="url(#gradWater)" stroke="#A9DCE3" stroke-width="0.5"/>
+                <ellipse cx="266" cy="301" rx="9" ry="2.5" fill="#FFFFFF" opacity="0.75"/>
+                <polygon points="350,295 365,288 370,296 354,302" fill="#7D5533" stroke="#422B17" stroke-width="1"/>
+                <line x1="345" y1="304" x2="352" y2="297" stroke="#3D2817" stroke-width="2"/>
+                <circle cx="372" cy="298" r="4" fill="#3D2817" stroke="#1D120A" stroke-width="1"/>
+                <ellipse cx="202" cy="250" rx="4.5" ry="2" fill="#D9B46A"/>
+                <circle cx="202" cy="253" r="2.5" fill="#E8C497"/>
+                <polygon points="199,255 205,255 207,268 197,268" fill="#3C5A78"/>
+                <line x1="199" y1="268" x2="198" y2="279" stroke="#5E4B3C" stroke-width="2"/>
+                <line x1="205" y1="268" x2="206" y2="279" stroke="#5E4B3C" stroke-width="2"/>
+                <line x1="206" y1="258" x2="212" y2="275" stroke="#7A5835" stroke-width="1.2"/>
+                <polygon points="211,273 214,277 210,277" fill="#888"/>
+                <ellipse cx="235" cy="295" rx="3.5" ry="2.2" fill="#ECEAE4"/>
+                <polygon points="238,295 240,296 238,297" fill="#D35400"/>
+                <ellipse cx="245" cy="298" rx="3" ry="2" fill="#8E4424"/>
+              </g>
+            </svg>
+          </div>
+
+          <div class="step-scrubber-bar" style="width: 100%; margin-top: 1rem;">
+            <button id="scrubberPrevBtn" class="scrubber-btn" title="Capa anterior">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <input type="range" id="layerScrubberSlider" class="scrubber-slider" min="1" max="8" value="8" step="1">
+            <button id="scrubberNextBtn" class="scrubber-btn" title="Siguiente capa">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Columna Derecha: Selector de Estratos y Ficha Técnica -->
+      <div class="simulator-sidebar-col">
+        <div class="layer-selector-card">
+          <div class="layer-selector-header">
+            <h4>Estratificación (1 al 8)</h4>
+            <button id="btnToggleAllLayers" class="toggle-all-btn">Mostrar / Ocultar Todo</button>
+          </div>
+          <div id="layerSelectorContainer"></div>
+        </div>
+
+        <div id="layerDetailContainer" class="layer-detail-card"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p class="footer-quote">"El diorama no reproduce la realidad: crea una realidad propia a escala de la imaginación."</p>
+      <p class="footer-sub">&copy; El Arte del Diorama &bull; Simulación Interactiva</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

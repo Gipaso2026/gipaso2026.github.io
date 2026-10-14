@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Arte del Diorama | Modelismo Escénico y Simulación de Capas</title>
+  
+  <!-- Fuentes Google: Cinzel para títulos rústicos y Outfit para lectura moderna -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Estilos del proyecto -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       CABECERA Y BARRA DE NAVEGACIÓN (Ideal para iframe de Google Sites)
+       ======================================================================== -->
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand" data-jump-tab="inicio">
+        <div class="brand-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+            <polyline points="2 17 12 22 22 17"></polyline>
+            <polyline points="2 12 12 17 22 12"></polyline>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">DIORAMAS</span>
+          <span class="brand-subtitle">Modelismo Escénico Artesanal</span>
+        </div>
+      </div>
+
+      <!-- Selector de Pestañas / Páginas -->
+      <nav class="nav-tabs" aria-label="Navegación principal">
+        <button class="nav-tab-btn active" data-tab="inicio">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+          <span>Inicio</span>
+        </button>
+
+        <button class="nav-tab-btn" data-tab="capas">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+            <polyline points="2 17 12 22 22 17"></polyline>
+            <polyline points="2 12 12 17 22 12"></polyline>
+          </svg>
+          <span>Simulación de Capas</span>
+        </button>
+
+        <button class="nav-tab-btn" data-tab="proceso">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+          </svg>
+          <span>Proceso de Creación</span>
+        </button>
+      </nav>
+
+      <!-- Botón de asistencia para Google Sites -->
+      <button class="embed-badge" data-open-modal="googleSites" title="Cómo embeber en Google Sites">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="12" y1="16" x2="12" y2="12"></line>
+          <line x1="12" y1="8" x2="12.01" y2="8"></line>
+        </svg>
+        <span>Embeber en Google Sites</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       CONTENIDO PRINCIPAL: VISTAS MODULARES
+       ======================================================================== -->
+  <main class="main-content">
+
+    <!-- ----------------------------------------------------------------------
+         PÁGINA 1: INICIO (HERO, DIORAMA CAMPESINO Y ANATOMÍA)
+         ---------------------------------------------------------------------- -->
+    <section id="view-inicio" class="tab-view active">
+      <div class="hero-section">
+        <div class="hero-text-col">
+          <span class="hero-tag">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Modelismo Hiperrealista &bull; Escala 1:35
+          </span>
+          <h1 class="hero-title">El Arte de Capturar el Mundo en Miniatura</h1>
+          <p class="hero-desc">
+            Un <strong>diorama</strong> no es una simple maqueta: es una ventana tridimensional que congela un instante en el tiempo. A través de la combinación de escultura, carpintería, pintura atmosférica y micro-vegetación, creamos historias vivas que transmiten textura, clima y emoción.
+          </p>
+          <div class="hero-actions">
+            <button class="btn btn-primary" data-jump-tab="capas">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/></svg>
+              Explorar Simulación de Capas
+            </button>
+            <button class="btn btn-secondary" data-jump-tab="proceso">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+              Ver Proceso Paso a Paso
+            </button>
+          </div>
+        </div>
+
+        <!-- Tarjeta con imagen del Diorama Campesino -->
+        <div class="diorama-frame-card">
+          <div class="diorama-image-wrapper">
+            <img src="assets/images/diorama_campesino_opt.jpg" 
+                 onerror="this.onerror=null; this.src='assets/images/diorama_campesino.jpg';" 
+                 alt="Diorama Campesino Tradicional a escala 1:35 con casa rural, huerto, pozo y caminos de tierra" 
+                 loading="eager">
+            <div class="plaque-tag">1:35 SCALE &bull; RUSTIC PEASANT FARMHOUSE</div>
+          </div>
+          <div class="diorama-specs-bar">
+            <div class="diorama-spec-item">
+              <span>Tema:</span>
+              <strong>Vida Campestre</strong>
+            </div>
+            <div class="diorama-spec-item">
+              <span>Escala:</span>
+              <strong>1:35 (54 mm)</strong>
+            </div>
+            <div class="diorama-spec-item">
+              <span>Base:</span>
+              <strong>Nogal Enmarcado</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Anatomía y elementos del Diorama Campesino -->
+      <div class="section-header">
+        <span class="section-tag">Anatomía de la Escena</span>
+        <h2 class="section-title">¿Qué Hace Especial a un Diorama Campesino?</h2>
+        <p class="section-desc">
+          Las escenas rurales campesinas son el estándar de oro del modelismo porque reúnen casi todas las disciplinas escénicas en un solo espacio: arquitectura rústica, desgaste por intemperie, cultivos a escala y vegetación viva.
+        </p>
+      </div>
+
+      <div class="anatomy-grid">
+        <div class="anatomy-card">
+          <div class="anatomy-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <h3>Arquitectura Vernácula</h3>
+          <p>Muros de mampostería envejecida, vigas de madera de balsa texturizadas con cepillo metálico y tejas de terracota colocadas una a una con efecto de musgo incipiente en las juntas.</p>
+        </div>
+
+        <div class="anatomy-card">
+          <div class="anatomy-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <h3>Huerto Tradicional a Escala</h3>
+          <p>Hileras de pequeñas coles y calabazas modeladas en masilla epoxi, rodeadas de una cerca de estacas irregulares de madera desgastada por la lluvia y el sol de campo.</p>
+        </div>
+
+        <div class="anatomy-card">
+          <div class="anatomy-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/></svg>
+          </div>
+          <h3>Camino de Rodadas de Carreta</h3>
+          <p>Surcos moldeados en la tierra húmeda por el paso de carretas, con sutiles charcos de agua estancada simulados con resina epoxi transparente brillante y polvo en los márgenes.</p>
+        </div>
+
+        <div class="anatomy-card">
+          <div class="anatomy-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 10a2 2 0 0 0-2 2c0 1.02-.1 2.51-.26 4"/><path d="M14 13.12c0 2.38 0 4.88-2 4.88-1.5 0-2.5-1.5-2.5-3.5 0-3 2-6.5 4.5-9.5"/></svg>
+          </div>
+          <h3>Vegetación Estratificada</h3>
+          <p>Combinación de césped electrostático en alturas de 2mm a 6mm, arbustos de musgo natural liofilizado y un árbol frutal artesanal con copa tupida y frutos en miniatura.</p>
+        </div>
+      </div>
+
+      <!-- Comparador de Escalas para Dioramas -->
+      <div class="scales-container">
+        <div class="section-header" style="margin-bottom: 1rem;">
+          <span class="section-tag">Referencia Técnica</span>
+          <h2 class="section-title">Guía de Escalas en Modelismo Escénico</h2>
+          <p class="section-desc">Elegir la escala correcta define el nivel de detalle y los materiales que utilizarás en tu proyecto.</p>
+        </div>
+
+        <div class="scales-grid">
+          <div class="scale-card">
+            <div class="scale-ratio">1:87</div>
+            <div class="scale-name">Escala H0</div>
+            <div class="scale-height">Figura: ~20 mm</div>
+            <p class="scale-desc">Típica del modelismo ferroviario. Permite representar grandes extensiones de paisaje rural en espacios compactos.</p>
+          </div>
+
+          <div class="scale-card">
+            <div class="scale-ratio">1:72</div>
+            <div class="scale-name">Escala Clásica</div>
+            <div class="scale-height">Figura: ~25 mm</div>
+            <p class="scale-desc">Muy popular para escenas de batallas, campos de labranza y aviación. Equilibrio perfecto entre detalle y tamaño.</p>
+          </div>
+
+          <div class="scale-card" style="border-color: var(--moss-light);">
+            <div class="scale-ratio" style="color: var(--moss-light);">1:35</div>
+            <div class="scale-name" style="color: var(--wood-light);">Escala Reina (Foto Principal)</div>
+            <div class="scale-height">Figura: ~50 mm</div>
+            <p class="scale-desc">La escala predilecta para dioramas individuales. Permite apreciar granos de madera, ladrillos individuales y arrugas de ropa.</p>
+          </div>
+
+          <div class="scale-card">
+            <div class="scale-ratio">1:24</div>
+            <div class="scale-name">Gran Escala</div>
+            <div class="scale-height">Figura: ~75 mm</div>
+            <p class="scale-desc">Utilizada para interiores de cabañas, talleres artesanales y dioramas donde cada herramienta tiene piezas móviles.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------------------------
+         PÁGINA 2: SIMULACIÓN DE CAPAS DE UN DIORAMA (SIMULADOR INTERACTIVO)
+         ---------------------------------------------------------------------- -->
+    <section id="view-capas" class="tab-view">
+      <div class="section-header simulator-header">
+        <span class="section-tag">Simulador Interactivo de Estratos</span>
+        <h2 class="section-title">Anatomía por Capas de un Diorama</h2>
+        <p class="section-desc">
+          Todo gran diorama se construye de abajo hacia arriba en estratos secuenciales. Utiliza los controles para aislar cada capa, explorar la <strong>vista explosionada</strong> o inspeccionar la ficha técnica de cada material.
+        </p>
+      </div>
+
+      <div class="simulator-workspace">
+        
+        <!-- Columna Izquierda: Escenario Visual 2.5D / SVG -->
+        <div class="simulator-stage-col">
+          <div class="simulator-stage-box">
+            
+            <!-- Controles superiores de la escena -->
+            <div class="stage-controls-overlay">
+              <div class="view-mode-pill">
+                <button id="btnViewNormal" class="mode-btn active" title="Visualización ensamblada">Vista Ensamblada</button>
+                <button id="btnViewExploded" class="mode-btn" title="Separar estratos verticalmente">Vista Explosionada</button>
+              </div>
+
+              <div id="activeLayersCounter" class="layer-counter-pill">
+                8 de 8 Capas Activas
+              </div>
+            </div>
+
+            <!-- Gráfico SVG Interactivo con las 8 capas apiladas -->
+            <div class="diorama-interactive-svg-wrap">
+              <svg id="dioramaInteractiveSvg" viewBox="0 0 520 380" width="100%" height="100%">
+                <defs>
+                  <!-- Filtros de sombra y texturas -->
+                  <filter id="layerShadow" x="-20%" y="-20%" width="140%" height="140%">
+                    <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#000" flood-opacity="0.6"/>
+                  </filter>
+                  <linearGradient id="gradWoodBase" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#4A2F1B"/>
+                    <stop offset="50%" stop-color="#2D1A0D"/>
+                    <stop offset="100%" stop-color="#190E07"/>
+                  </linearGradient>
+                  <linearGradient id="gradFoam" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stop-color="#5588A3"/>
+                    <stop offset="100%" stop-color="#2C4D5E"/>
+                  </linearGradient>
+                  <linearGradient id="gradEarth" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#805B3A"/>
+                    <stop offset="50%" stop-color="#5B3E25"/>
+                    <stop offset="100%" stop-color="#3B2513"/>
+                  </linearGradient>
+                  <linearGradient id="gradGrass" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#6F9940"/>
+                    <stop offset="50%" stop-color="#4E7326"/>
+                    <stop offset="100%" stop-color="#2F4C15"/>
+                  </linearGradient>
+                  <linearGradient id="gradRoof" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#C2593F"/>
+                    <stop offset="100%" stop-color="#7A2D1A"/>
+                  </linearGradient>
+                  <linearGradient id="gradWater" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#78B3B8" stop-opacity="0.8"/>
+                    <stop offset="100%" stop-color="#BEE5EB" stop-opacity="0.95"/>
+                  </linearGradient>
+                </defs>
+
+                <!-- CAPA 0: BASE Y MARCO DE MADERA NOBLE -->
+                <g id="diorama-svg-layer-0" class="stacked-layer-item">
+                  <!-- Plinto inferior biselado -->
+                  <polygon points="50,290 260,350 470,290 260,230" fill="#24140A" filter="url(#layerShadow)"/>
+                  <polygon points="50,290 260,350 260,370 50,310" fill="#3D2313"/>
+                  <polygon points="260,350 470,290 470,310 260,370" fill="#1A0D06"/>
+                  <!-- Placa dorada frontal -->
+                  <rect x="220" y="348" width="80" height="14" rx="2" fill="#C8963E" stroke="#5A3E12" stroke-width="1"/>
+                  <text x="260" y="358" font-family="'Cinzel', serif" font-size="7" font-weight="700" fill="#2A1B05" text-anchor="middle">1:35 DIORAMA</text>
+                </g>
+
+                <!-- CAPA 1: RELIEVE Y NÚCLEO TOPOGRÁFICO DE XPS -->
+                <g id="diorama-svg-layer-1" class="stacked-layer-item">
+                  <!-- Bloque tallado con desniveles y corte lateral visible -->
+                  <polygon points="65,275 260,332 455,275 260,220" fill="url(#gradFoam)"/>
+                  <polygon points="65,275 260,332 260,348 65,291" fill="#325A6E"/>
+                  <polygon points="260,332 455,275 455,291 260,348" fill="#1F3A47"/>
+                  <!-- Colina tallada en cuadrante posterior -->
+                  <path d="M120,235 Q180,195 240,215 T360,225 L410,250 L260,290 Z" fill="#416F85" opacity="0.9"/>
+                </g>
+
+                <!-- CAPA 2: ESTRATO DE TEXTURA Y TIERRA REAL -->
+                <g id="diorama-svg-layer-2" class="stacked-layer-item">
+                  <!-- Manto de tierra con rugosidad y corte de piedras -->
+                  <path d="M68,272 Q150,295 260,329 Q360,298 452,272 Q360,225 260,218 Q160,224 68,272 Z" fill="url(#gradEarth)"/>
+                  <!-- Afloramiento rocoso en la esquina izquierda -->
+                  <polygon points="90,255 115,245 130,260 110,270 85,263" fill="#6C6965" stroke="#3A3835" stroke-width="1"/>
+                  <polygon points="120,250 145,242 155,255 135,262" fill="#585652"/>
+                  <!-- Piedras dispersas a escala -->
+                  <circle cx="210" cy="285" r="3" fill="#757069"/>
+                  <circle cx="225" cy="292" r="2" fill="#8C867E"/>
+                  <circle cx="340" cy="275" r="2.5" fill="#757069"/>
+                </g>
+
+                <!-- CAPA 3: IMPRIMACIÓN Y PINTURA BASE (LUCES Y SOMBRAS) -->
+                <g id="diorama-svg-layer-3" class="stacked-layer-item">
+                  <!-- Sombra en las rocas y depresiones -->
+                  <ellipse cx="115" cy="255" rx="30" ry="12" fill="#20150D" opacity="0.45"/>
+                  <!-- Sendero de tierra seca en tonos ocres claros -->
+                  <path d="M160,265 C200,280 250,290 310,310 C340,318 360,305 380,295" stroke="#9E7649" stroke-width="22" stroke-linecap="round" fill="none" opacity="0.75"/>
+                  <path d="M165,265 C205,280 255,290 315,310" stroke="#B88F5E" stroke-width="14" stroke-linecap="round" fill="none" opacity="0.5"/>
+                </g>
+
+                <!-- CAPA 4: ARQUITECTURA RURAL CAMPESINA (CABAÑA, POZO, VALLAS) -->
+                <g id="diorama-svg-layer-4" class="stacked-layer-item">
+                  <!-- Cabaña campesina isométrica -->
+                  <!-- Pared frontal de mampostería/madera -->
+                  <polygon points="190,195 260,230 260,175 190,140" fill="#E2DAC9" stroke="#5C4533" stroke-width="1.5"/>
+                  <!-- Vigas de madera entramado vista -->
+                  <line x1="225" y1="212" x2="225" y2="157" stroke="#684A31" stroke-width="3"/>
+                  <line x1="190" y1="175" x2="260" y2="210" stroke="#684A31" stroke-width="2"/>
+                  <!-- Puerta de madera rústica -->
+                  <polygon points="215,207 235,217 235,185 215,175" fill="#5A3A1F" stroke="#37210E" stroke-width="1"/>
+                  <!-- Pared lateral visible -->
+                  <polygon points="260,230 315,198 315,145 260,175" fill="#C5BCAB" stroke="#5C4533" stroke-width="1.5"/>
+                  <!-- Ventana lateral con postigo de madera -->
+                  <polygon points="280,188 298,178 298,165 280,174" fill="#382A20"/>
+                  <!-- Tejado a dos aguas de terracota -->
+                  <polygon points="180,140 255,176 315,140 240,105" fill="url(#gradRoof)" stroke="#531F13" stroke-width="1.5"/>
+                  <polygon points="255,176 325,136 320,132 255,172" fill="#882C17"/>
+                  <!-- Chimenea de piedra -->
+                  <polygon points="230,118 245,110 245,95 230,102" fill="#756E65" stroke="#3D3832" stroke-width="1"/>
+
+                  <!-- Pozo campesino de piedra -->
+                  <ellipse cx="150" cy="265" rx="14" ry="8" fill="#524C44" stroke="#2B2723" stroke-width="1.5"/>
+                  <polygon points="138,265 138,252 142,252 142,265" fill="#704F34"/>
+                  <polygon points="158,265 158,252 162,252 162,265" fill="#704F34"/>
+                  <polygon points="135,252 150,242 165,252" fill="#8A462B"/>
+
+                  <!-- Valla campesina de estacas de madera -->
+                  <g stroke="#614429" stroke-width="2.5" stroke-linecap="round">
+                    <line x1="285" y1="265" x2="285" y2="245"/>
+                    <line x1="305" y1="260" x2="305" y2="240"/>
+                    <line x1="325" y1="255" x2="325" y2="235"/>
+                    <line x1="280" y1="255" x2="330" y2="245" stroke-width="1.5"/>
+                  </g>
+                </g>
+
+                <!-- CAPA 5: VEGETACIÓN BASE (CÉSPED ESTÁTICO) -->
+                <g id="diorama-svg-layer-5" class="stacked-layer-item">
+                  <!-- Zonas de pradera con césped electrostático verde y seco -->
+                  <path d="M75,265 Q130,230 180,240 Q170,270 120,278 Z" fill="url(#gradGrass)" opacity="0.9"/>
+                  <path d="M330,260 Q390,250 435,268 Q380,290 325,280 Z" fill="url(#gradGrass)" opacity="0.85"/>
+                  <!-- Mechones de hierba alta (Tufts) de 4mm y 6mm -->
+                  <g fill="#7AA874" stroke="#486D33" stroke-width="0.8">
+                    <path d="M130,270 L128,260 L132,270 L135,258 L136,270 Z"/>
+                    <path d="M340,285 L338,276 L342,285 L345,274 L347,285 Z"/>
+                    <path d="M220,305 L218,296 L221,305 L224,295 L225,305 Z" fill="#BFAF6B" stroke="#7A6F3A"/>
+                  </g>
+                </g>
+
+                <!-- CAPA 6: FOLLAJE ALTO, ÁRBOL ARTESANAL Y HUERTO -->
+                <g id="diorama-svg-layer-6" class="stacked-layer-item">
+                  <!-- Tronco y ramas de árbol frutal retorcido -->
+                  <path d="M380,245 Q375,200 370,165 Q360,135 345,115" stroke="#462C18" stroke-width="8" stroke-linecap="round" fill="none"/>
+                  <path d="M370,165 Q395,140 410,125" stroke="#462C18" stroke-width="5" stroke-linecap="round" fill="none"/>
+                  <path d="M370,175 Q380,150 375,130" stroke="#462C18" stroke-width="4" stroke-linecap="round" fill="none"/>
+                  <!-- Copa de follaje denso con micro-esponja -->
+                  <ellipse cx="355" cy="115" rx="36" ry="26" fill="#3D6328" opacity="0.95"/>
+                  <ellipse cx="380" cy="105" rx="42" ry="30" fill="#588534" opacity="0.95"/>
+                  <ellipse cx="405" cy="120" rx="34" ry="24" fill="#477329" opacity="0.95"/>
+                  <ellipse cx="375" cy="95" rx="32" ry="22" fill="#75A843" opacity="0.9"/>
+                  <!-- Manzanitas rojas a escala -->
+                  <circle cx="360" cy="110" r="2.2" fill="#C93226"/>
+                  <circle cx="385" cy="105" r="2.2" fill="#C93226"/>
+                  <circle cx="400" cy="125" r="2.2" fill="#C93226"/>
+                  <circle cx="370" cy="95" r="2.2" fill="#C93226"/>
+
+                  <!-- Pequeño huerto con calabazas campesinas -->
+                  <g>
+                    <!-- Tierra labrada -->
+                    <rect x="295" y="270" width="35" height="15" rx="3" fill="#422915" stroke="#27180D" stroke-width="1"/>
+                    <!-- Repollos / Coliflor -->
+                    <circle cx="303" cy="275" r="3" fill="#88BA59"/>
+                    <circle cx="312" cy="275" r="3.2" fill="#7CAB4D"/>
+                    <circle cx="321" cy="275" r="2.8" fill="#88BA59"/>
+                    <!-- Calabazas naranjas -->
+                    <circle cx="307" cy="281" r="3.5" fill="#E67E22" stroke="#A8530B" stroke-width="0.8"/>
+                    <circle cx="318" cy="281" r="3.8" fill="#E67E22" stroke="#A8530B" stroke-width="0.8"/>
+                  </g>
+                </g>
+
+                <!-- CAPA 7: MICRO-DETALLES, WEATHERING Y FIGURAS -->
+                <g id="diorama-svg-layer-7" class="stacked-layer-item">
+                  <!-- Charco de agua estancada realista en el camino (Resina reflectante) -->
+                  <ellipse cx="270" cy="302" rx="20" ry="7" fill="url(#gradWater)" stroke="#A9DCE3" stroke-width="0.5"/>
+                  <!-- Brillo reflejo especular en el agua -->
+                  <ellipse cx="266" cy="301" rx="9" ry="2.5" fill="#FFFFFF" opacity="0.75"/>
+
+                  <!-- Carretilla campesina de madera -->
+                  <polygon points="350,295 365,288 370,296 354,302" fill="#7D5533" stroke="#422B17" stroke-width="1"/>
+                  <line x1="345" y1="304" x2="352" y2="297" stroke="#3D2817" stroke-width="2"/>
+                  <circle cx="372" cy="298" r="4" fill="#3D2817" stroke="#1D120A" stroke-width="1"/>
+
+                  <!-- Figura del Campesino a escala (Silueta estilizada 1:35) -->
+                  <!-- Sombrero de paja y cuerpo -->
+                  <ellipse cx="202" cy="250" rx="4.5" ry="2" fill="#D9B46A"/>
+                  <circle cx="202" cy="253" r="2.5" fill="#E8C497"/>
+                  <polygon points="199,255 205,255 207,268 197,268" fill="#3C5A78"/> <!-- Chaleco azul -->
+                  <line x1="199" y1="268" x2="198" y2="279" stroke="#5E4B3C" stroke-width="2"/> <!-- Pierna -->
+                  <line x1="205" y1="268" x2="206" y2="279" stroke="#5E4B3C" stroke-width="2"/>
+                  <line x1="206" y1="258" x2="212" y2="275" stroke="#7A5835" stroke-width="1.2"/> <!-- Horca o cayado -->
+                  <polygon points="211,273 214,277 210,277" fill="#888"/>
+
+                  <!-- Gallinas en miniatura en el suelo -->
+                  <ellipse cx="235" cy="295" rx="3.5" ry="2.2" fill="#ECEAE4"/>
+                  <polygon points="238,295 240,296 238,297" fill="#D35400"/>
+                  <ellipse cx="245" cy="298" rx="3" ry="2" fill="#8E4424"/>
+                </g>
+              </svg>
+            </div>
+
+            <!-- Scrubber acumulativo inferior (Barra de progreso de capas) -->
+            <div class="step-scrubber-bar" style="width: 100%; margin-top: 1rem;">
+              <button id="scrubberPrevBtn" class="scrubber-btn" title="Capa anterior">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+              </button>
+              <input type="range" id="layerScrubberSlider" class="scrubber-slider" min="1" max="8" value="8" step="1">
+              <button id="scrubberNextBtn" class="scrubber-btn" title="Siguiente capa">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Columna Derecha: Selector de Estratos y Ficha Técnica -->
+        <div class="simulator-sidebar-col">
+          
+          <!-- Lista de capas con interruptores individuales -->
+          <div class="layer-selector-card">
+            <div class="layer-selector-header">
+              <h4>Estratificación (1 al 8)</h4>
+              <button id="btnToggleAllLayers" class="toggle-all-btn">Mostrar / Ocultar Todo</button>
+            </div>
+            <div id="layerSelectorContainer">
+              <!-- Generado dinámicamente por main.js -->
+            </div>
+          </div>
+
+          <!-- Ficha Técnica Dinámica de la Capa Seleccionada -->
+          <div id="layerDetailContainer" class="layer-detail-card">
+            <!-- Rellenado dinámicamente con materiales, herramientas y consejos -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------------------------
+         PÁGINA 3: PROCESO DE CREACIÓN DE UN DIORAMA (GUÍA PASO A PASO)
+         ---------------------------------------------------------------------- -->
+    <section id="view-proceso" class="tab-view">
+      <div class="section-header">
+        <span class="process-hero-tag">Metodología Artesanal</span>
+        <h2 class="section-title">El Proceso de Creación Paso a Paso</h2>
+        <p class="section-desc">
+          Desde la concepción de la idea y el marco de carpintería hasta las micro-pátinas de suciedad y polvo. Sigue esta guía profesional para construir dioramas de nivel de exhibición.
+        </p>
+      </div>
+
+      <!-- Línea de tiempo de las 6 Fases Maestras -->
+      <div class="process-timeline">
+        
+        <!-- Fase 1 -->
+        <div class="timeline-step-card">
+          <div class="step-node-bubble">
+            <span class="step-num-text">01</span>
+            <span class="step-phase-label">Fase</span>
+          </div>
+          <div class="step-card-body">
+            <div class="step-header-row">
+              <h3 class="step-title">Concepción, Escala y Composición</h3>
+              <div class="step-meta-badges">
+                <span class="badge badge-time">2 a 4 horas</span>
+                <span class="badge badge-tool">Bocetos & Regla</span>
+              </div>
+            </div>
+            <p class="step-description">
+              Ningún corte debe hacerse sin una historia definida. Decide la escala (1:35 para alto detalle campesino, 1:72 para paisajes abiertos) y aplica la <strong>regla de los tercios</strong>. Coloca el punto focal (como la cabaña rústica o el pozo) ligeramente desviado del centro para guiar la mirada del espectador de forma orgánica.
+            </p>
+            <div class="step-keys-grid">
+              <div class="key-item">
+                <strong>Clave de Diseño:</strong>
+                <span>Líneas de visión diagonales que conducen al punto focal.</span>
+              </div>
+              <div class="key-item">
+                <strong>Material:</strong>
+                <span>Papel cuadriculado y maquetas rápidas de cartulina.</span>
+              </div>
+              <div class="key-item">
+                <strong>Consejo:</strong>
+                <span>Observa el diorama desde los 4 ángulos para evitar puntos ciegos sin interés.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fase 2 -->
+        <div class="timeline-step-card">
+          <div class="step-node-bubble">
+            <span class="step-num-text">02</span>
+            <span class="step-phase-label">Fase</span>
+          </div>
+          <div class="step-card-body">
+            <div class="step-header-row">
+              <h3 class="step-title">Carpintería de Base y Escultura de Relieve</h3>
+              <div class="step-meta-badges">
+                <span class="badge badge-time">4 a 6 horas</span>
+                <span class="badge badge-tool">XPS & Hilo Térmico</span>
+              </div>
+            </div>
+            <p class="step-description">
+              Construye la caja o marco perimetral en tablero de DM/MDF con molduras de madera selladas. Rellena el interior con láminas de <strong>poliestireno extruido (XPS)</strong> pegadas con cola de poliuretano o cola blanca. Talla las elevaciones, colinas campesinas y la depresión del sendero usando un cortador de hilo caliente o cúter.
+            </p>
+            <div class="step-keys-grid">
+              <div class="key-item">
+                <strong>Regla de Oro:</strong>
+                <span>El terreno plano es aburrido; dale siempre al menos 5° a 15° de pendiente suave.</span>
+              </div>
+              <div class="key-item">
+                <strong>Pegamento Seguro:</strong>
+                <span>Nunca uses adhesivos con solventes sobre XPS (se derrite inmediatamente).</span>
+              </div>
+              <div class="key-item">
+                <strong>Textura Previa:</strong>
+                <span>Presiona papel de aluminio arrugado sobre el XPS para darle rugosidad base.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fase 3 -->
+        <div class="timeline-step-card">
+          <div class="step-node-bubble">
+            <span class="step-num-text">03</span>
+            <span class="step-phase-label">Fase</span>
+          </div>
+          <div class="step-card-body">
+            <div class="step-header-row">
+              <h3 class="step-title">Texturizado de Suelo y Tierra Real</h3>
+              <div class="step-meta-badges">
+                <span class="badge badge-time">1 día (+ secado)</span>
+                <span class="badge badge-tool">Tamiz & PVA</span>
+              </div>
+            </div>
+            <p class="step-description">
+              Aplica una capa de masilla para modelar (Sculptamold o escayola con cola blanca). Mientras está fresca, incrusta rocas de corteza de pino y espolvorea <strong>tierra natural recolectada en el campo</strong> (previamente horneada a 120°C durante 30 minutos para desinfectar y tamizada en varios calibres). Marca las rodadas de carreta con una rueda a escala mientras la pasta esté tierna.
+            </p>
+            <div class="step-keys-grid">
+              <div class="key-item">
+                <strong>Fijación Perfecta:</strong>
+                <span>Pulveriza alcohol isopropílico y gotea cola diluida 50/50 con agua y jabón líquido.</span>
+              </div>
+              <div class="key-item">
+                <strong>Variedad de Grano:</strong>
+                <span>Usa arena fina para el sendero y piedrecillas angulares para las cunetas.</span>
+              </div>
+              <div class="key-item">
+                <strong>Secado:</strong>
+                <span>Espera mínimo 24 horas antes de comenzar la fase de pintura acrílica.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fase 4 -->
+        <div class="timeline-step-card">
+          <div class="step-node-bubble">
+            <span class="step-num-text">04</span>
+            <span class="step-phase-label">Fase</span>
+          </div>
+          <div class="step-card-body">
+            <div class="step-header-row">
+              <h3 class="step-title">Construcción de Estructuras y Envejecido</h3>
+              <div class="step-meta-badges">
+                <span class="badge badge-time">8 a 12 horas</span>
+                <span class="badge badge-tool">Madera de Balsa & Pátinas</span>
+              </div>
+            </div>
+            <p class="step-description">
+              Fabrica la cabaña campesina, el pozo de piedra y las cercas de estacas. Emplea madera de balsa o tilo, marcando las vetas con un cepillo metálico de alambre. Aplica lavados de pintura acrílica en tonos tierra, óxido y suciedad escurrida en las paredes para simular años de exposición al sol y lluvia.
+            </p>
+            <div class="step-keys-grid">
+              <div class="key-item">
+                <strong>Técnica de la Madera:</strong>
+                <span>Trata la madera con tintes acrílicos aguados en gris ceniza y marrón corteza.</span>
+              </div>
+              <div class="key-item">
+                <strong>Tejados Realistas:</strong>
+                <span>Coloca las tejas de terracota en filas superpuestas con pequeñas roturas irregulares.</span>
+              </div>
+              <div class="key-item">
+                <strong>Pátina de Humedad:</strong>
+                <span>Aplica lavados verde musgo en las zonas bajas de los muros que tocan el suelo.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fase 5 -->
+        <div class="timeline-step-card">
+          <div class="step-node-bubble">
+            <span class="step-num-text">05</span>
+            <span class="step-phase-label">Fase</span>
+          </div>
+          <div class="step-card-body">
+            <div class="step-header-row">
+              <h3 class="step-title">Vegetación Electrostática y Arbolado Artesanal</h3>
+              <div class="step-meta-badges">
+                <span class="badge badge-time">4 a 6 horas</span>
+                <span class="badge badge-tool">Aplicador Estático & Esponjas</span>
+              </div>
+            </div>
+            <p class="step-description">
+              Aplica césped electrostático con un aplicador estático para que las fibras de 2mm a 4mm queden erguidas como en la naturaleza. Mezcla tonos verde pradera con pajizo seco en las zonas soleadas. Construye el árbol campesino retorciendo alambres de cobre, cubriendo el tronco con masilla acrílica texturizada y poblando las ramas con follaje de micro-esponja.
+            </p>
+            <div class="step-keys-grid">
+              <div class="key-item">
+                <strong>Gradación Botánica:</strong>
+                <span>Hierba baja en zonas pisadas, hierba alta de 6mm junto a las vallas campesinas.</span>
+              </div>
+              <div class="key-item">
+                <strong>Hojas a Escala:</strong>
+                <span>Fija las micro-hojas a las ramas con laca para el pelo extrafuerte o adhesivo en spray.</span>
+              </div>
+              <div class="key-item">
+                <strong>Huerto:</strong>
+                <span>Crea pequeños montículos de tierra con repollos en miniatura ordenados.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fase 6 -->
+        <div class="timeline-step-card">
+          <div class="step-node-bubble">
+            <span class="step-num-text">06</span>
+            <span class="step-phase-label">Fase</span>
+          </div>
+          <div class="step-card-body">
+            <div class="step-header-row">
+              <h3 class="step-title">Figuras, Efectos de Agua y Weathering Final</h3>
+              <div class="step-meta-badges">
+                <span class="badge badge-time">4 a 8 horas</span>
+                <span class="badge badge-tool">Pigmentos & Resina UV</span>
+              </div>
+            </div>
+            <p class="step-description">
+              Pinta las figuras campesinas con degradados de luz zenital para resaltar la expresión y postura de labor. Vierte pequeñas gotas de <strong>resina epoxi bicomponente o resina UV</strong> en las rodadas del camino para recrear charcos frescos con barro acumulado. Termina empolvando toda la base con pigmentos secos de polvo y sella el marco de madera con barniz satinado de alta calidad.
+            </p>
+            <div class="step-keys-grid">
+              <div class="key-item">
+                <strong>Efecto Charco:</strong>
+                <span>Tiñe la resina del fondo con una gota microscópica de pintura marrón antes de curar.</span>
+              </div>
+              <div class="key-item">
+                <strong>Polvo en Ruedas:</strong>
+                <span>Aplica pigmento ocre seco en la parte inferior de la carreta y botas del campesino.</span>
+              </div>
+              <div class="key-item">
+                <strong>Toque Maestro:</strong>
+                <span>Limpia perfectamente los bordes exteriores del marco para un contraste impecable.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Herramientas Interactivas: Calculadora de Escalas y Checklist del Modelista -->
+      <div class="tools-interactive-grid">
+        
+        <!-- Herramienta 1: Calculadora de Escala para Modelistas -->
+        <div class="tool-card">
+          <h3 class="tool-card-title">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="16" y1="14" x2="16" y2="18"/><path d="M16 10h.01"/><path d="M12 10h.01"/><path d="M8 10h.01"/><path d="M12 14h.01"/><path d="M8 14h.01"/><path d="M12 18h.01"/><path d="M8 18h.01"/></svg>
+            Calculadora de Escala
+          </h3>
+          <p class="tool-card-desc">Introduce cualquier medida del mundo real (la altura de una puerta, un árbol o una persona) y obtén su tamaño exacto en tu diorama.</p>
+
+          <div class="calc-form-group">
+            <label for="calcRealSizeInput">Medida en la Vida Real:</label>
+            <div class="calc-input-row">
+              <input type="number" id="calcRealSizeInput" class="calc-input" value="1.75" step="0.05" min="0.01">
+              <select id="calcUnitSelect" class="calc-input" style="max-width: 110px;">
+                <option value="m" selected>Metros (m)</option>
+                <option value="cm">Centímetros (cm)</option>
+                <option value="mm">Milímetros (mm)</option>
+              </select>
+            </div>
+          </div>
+
+          <label style="font-size: 0.82rem; color: var(--text-muted); display:block; margin-bottom: 0.4rem;">Selecciona la Escala de tu Diorama:</label>
+          <div class="scale-btn-selector">
+            <button class="scale-btn active" data-scale="35">1:35 (Militar / Rural)</button>
+            <button class="scale-btn" data-scale="72">1:72 (Clásica)</button>
+            <button class="scale-btn" data-scale="87">1:87 (H0 Trenes)</button>
+            <button class="scale-btn" data-scale="48">1:48 (Aviación)</button>
+            <button class="scale-btn" data-scale="24">1:24 (Gran Escala)</button>
+          </div>
+
+          <div class="calc-result-box">
+            <div class="calc-result-label">Tamaño en tu Diorama:</div>
+            <div id="calcResultValue" class="calc-result-val">50.0 mm</div>
+            <div id="calcResultSub" class="calc-result-sub">Equivale a 5.0 cm en escala 1:35</div>
+          </div>
+        </div>
+
+        <!-- Herramienta 2: Checklist Interactivo de Materiales -->
+        <div class="tool-card">
+          <h3 class="tool-card-title">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 11 3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+            Checklist de Materiales
+          </h3>
+          <p class="tool-card-desc">Marca los materiales que ya tienes en tu taller para saber si estás listo para comenzar la construcción.</p>
+
+          <div class="checklist-progress-wrap">
+            <div class="checklist-progress-meta">
+              <span id="checklistCount">0 de 14 materiales listos</span>
+              <strong id="checklistPercent">0%</strong>
+            </div>
+            <div class="checklist-progress-bar">
+              <div id="checklistFill" class="checklist-progress-fill"></div>
+            </div>
+          </div>
+
+          <div id="checklistContainer" class="checklist-items-scroll">
+            <!-- Rellenado por main.js -->
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Errores Frecuentes y Soluciones -->
+      <div class="section-header" style="margin-bottom: 1.5rem;">
+        <span class="section-tag">Solución de Problemas</span>
+        <h2 class="section-title">Errores Comunes y Consejos del Maestro</h2>
+      </div>
+
+      <div class="faq-accordion">
+        <div class="faq-item">
+          <div class="faq-header">
+            <h4>¿Por qué mi césped estático queda plano o apelmazado?</h4>
+            <div class="faq-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+          </div>
+          <div class="faq-body">
+            Esto sucede cuando se espolvorea con los dedos sin carga electrostática. Para que el césped quede erguido como briznas reales, necesitas un aplicador electrostático (incluso uno casero fabricado con una raqueta matamoscas eléctrica y un colador metálico) con el cable de masa clavado a la cola fresca mediante un alfiler.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-header">
+            <h4>La cola blanca deja un brillo plástico desagradable en la tierra</h4>
+            <div class="faq-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+          </div>
+          <div class="faq-body">
+            La cola PVA estándar tiende a secar satinada o brillante. Para evitarlo: (1) Añade una gota diminuta de detergente lavavajillas a la mezcla de cola y agua, (2) Aplica una capa final de barniz ultra-mate en spray (como Testors Dullcote o Vallejo Matt Varnish), y (3) Espolvorea pigmentos secos sobre la zona tratada.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-header">
+            <h4>El poliestireno extruido (XPS) se derritió al pegar o pintar</h4>
+            <div class="faq-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+          </div>
+          <div class="faq-body">
+            El poliestireno es extremadamente sensible a disolventes como el tolueno, la acetona o los propelentes de sprays con base solvente. Utiliza únicamente adhesivos libres de solventes (cola blanca PVA, cola de contacto al agua o pegamento caliente a baja temperatura) y aplica siempre pinturas con base acuosa (acrílicos).
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-header">
+            <h4>¿Cómo evitar que la base de madera se arquee con el tiempo?</h4>
+            <div class="faq-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+          </div>
+          <div class="faq-body">
+            El agua de las escayolas y colas es absorbida por la madera, combándola irremisiblemente. Utiliza siempre tablero DM/MDF de al menos 15mm de grosor y aplica dos manos de imprimación o sellador acrílico por AMBAS caras del tablero antes de empezar cualquier trabajo escénico.
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Banner informativo para Google Sites -->
+    <div class="google-sites-banner">
+      <div class="gs-banner-info">
+        <h3>¿Deseas incrustar este sitio en Google Sites?</h3>
+        <p>Este proyecto está 100% optimizado para integrarse directamente dentro de Google Sites mediante un bloque de código o enlace seguro, adaptándose a cualquier ancho de pantalla.</p>
+      </div>
+      <button class="btn btn-primary" data-open-modal="googleSites">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="9" y1="3" x2="9" y2="21"/></svg>
+        Ver Instrucciones de Incrustación
+      </button>
+    </div>
+
+  </main>
+
+  <!-- ========================================================================
+       PIE DE PÁGINA
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p class="footer-quote">"El diorama no reproduce la realidad: crea una realidad propia a escala de la imaginación."</p>
+      <p class="footer-sub">&copy; El Arte del Diorama &bull; Diseñado para Modelismo Escénico y Google Sites</p>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       MODAL DE ASISTENCIA PARA GOOGLE SITES
+       ======================================================================== -->
+  <div id="googleSitesModal" class="modal-backdrop">
+    <div class="modal-card">
+      <div class="modal-head">
+        <h3>Cómo Embeber en Google Sites</h3>
+        <button id="closeModalBtn" class="modal-close-btn">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">
+          Para colocar este sitio web interactivo en tu página de Google Sites, sigue estos sencillos pasos:
+        </p>
+
+        <ol style="font-size: 0.88rem; color: var(--text-main); margin-left: 1.25rem; margin-bottom: 1.25rem; display:flex; flex-direction:column; gap:0.4rem;">
+          <li>Abre el editor de tu página en <strong>Google Sites</strong>.</li>
+          <li>En el panel lateral derecho, haz clic en <strong>Insertar &gt; Incorporar (&lt;/&gt;)</strong>.</li>
+          <li>Selecciona la pestaña <strong>"Código de inserción"</strong>.</li>
+          <li>Pega el código HTML completo del archivo <code>google_sites_embed.html</code> o usa la etiqueta iframe siguiente si lo alojas en GitHub Pages o Drive:</li>
+        </ol>
+
+        <div id="iframeCodeSnippet" class="modal-code-box">&lt;iframe src="index.html" width="100%" height="860px" style="border:none; border-radius:12px; box-shadow:0 6px 24px rgba(0,0,0,0.4);" allowfullscreen&gt;&lt;/iframe&gt;</div>
+
+        <div style="display: flex; justify-content: flex-end; gap: 0.75rem;">
+          <button id="copyIframeBtn" class="btn btn-primary" style="padding: 0.5rem 1.25rem; font-size: 0.88rem;">
+            Copiar Código Iframe
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts del proyecto -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
